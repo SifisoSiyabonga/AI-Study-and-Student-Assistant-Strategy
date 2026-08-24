@@ -1,7 +1,7 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const dotenv = require('dotenv');
-const path = require('path');
+
 
 dotenv.config();
 
@@ -73,7 +73,7 @@ app.listen(
         )
 );
 // Serve static files and handle root route
-const path = require('path');
+
 app.use(express.static(__dirname));
 
 app.get('/', (req, res) => {
