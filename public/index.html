@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>AI Study & Assignment Assistant</title>
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
+</head>
+
+
+<body>
+
+    <div class="card">
+
+
+        <!-- ==========================================
+             HEADER
+        =========================================== -->
+
+        <h2>
+            AI Study & Assignment Assistant
+        </h2>
+
+
+        <!-- ==========================================
+             USER
+        =========================================== -->
+
+        <div class="user-nav">
+
+            Logged in as:
+
+            <strong id="userName"></strong>
+
+            |
+
+            <a
+                href="#"
+                id="logoutBtn"
+            >
+                Logout
+            </a>
+
+        </div>
+
+
+        <!-- ==========================================
+             CHAT HISTORY
+        =========================================== -->
+
+        <div
+            id="chatHistory"
+            class="chat-history"
+        ></div>
+
+
+        <!-- ==========================================
+             DOCUMENT / IMAGE UPLOAD
+        =========================================== -->
+
+        <div class="document-section">
+
+            <label>
+                📚 Upload Study Material
+            </label>
+
+            <p class="upload-info">
+
+                Upload a PDF, Word document, TXT file,
+                or image and ask questions about it.
+
+            </p>
+
+
+            <div class="upload-box">
+
+
+                <!-- Hidden file input -->
+
+                <input
+                    type="file"
+                    id="documentInput"
+                    accept=".pdf,.doc,.docx,.txt,.jpg,.jpeg,.png,.webp"
+                    hidden
+                >
+
+
+                <!-- Choose file -->
+
+                <button
+                    type="button"
+                    id="uploadBtn"
+                >
+                    📎 Choose File
+                </button>
+
+
+                <span id="fileName">
+
+                    No file selected
+
+                </span>
+
+
+            </div>
+
+
+            <!-- Upload status -->
+
+            <div
+                id="uploadStatus"
+                class="upload-status"
+            ></div>
+
+
+            <!-- Remove file -->
+
+            <button
+                type="button"
+                id="removeDocumentBtn"
+                class="hidden remove-btn"
+            >
+                🗑️ Remove File
+            </button>
+
+
+            <!-- Image preview -->
+
+            <div
+                id="imagePreview"
+                class="image-preview hidden"
+            >
+
+                <img
+                    id="previewImage"
+                    src=""
+                    alt="Selected image"
+                >
+
+            </div>
+
+
+        </div>
+
+
+        <!-- ==========================================
+             QUESTION AREA
+        =========================================== -->
+
+        <div class="question-section">
+
+
+            <label for="questionInput">
+
+                Ask your question:
+
+            </label>
+
+
+            <textarea
+                id="questionInput"
+                placeholder="Ask anything about your studies..."
+            ></textarea>
+
+
+            <!-- Buttons -->
+
+            <div class="btn-group">
+
+
+                <button
+                    id="askBtn"
+                    type="button"
+                >
+
+                    🚀 Ask AI
+
+                </button>
+
+
+                <button
+                    id="pdfBtn"
+                    class="hidden"
+                    type="button"
+                >
+
+                    📄 Download PDF Guide
+
+                </button>
+
+
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+
+    <!-- ==========================================
+         JAVASCRIPT
+    =========================================== -->
+
+    <script src="app.js"></script>
+
+
+</body>
+
+</html>
